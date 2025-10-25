@@ -1,4 +1,10 @@
-# 
+# LLM Coordinate Images
+
+Inspired by https://outsidetext.substack.com/p/how-does-a-blind-model-see-the-earth, exploring creating images by probing output probabilities of an LLM, asking a question about one coordinate at a time.
+
+Currently getting about resulting probabilities at a rate of 15 points per second using Qwen3-8B and one Nvidia RTX 3090 and vLLM (chosen to hopefully maximally utilize the possible caching when using many very similar prompts in a row).
+
+Tried testing this by generating a Mandelbrot set (it doesn't look very impressive with Qwen3-8b).
 
 ```
 uv venv
@@ -6,5 +12,6 @@ source .venv/bin/activate
 uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 uv pip install transformers
 uv pip install accelerate
-python inference.py
+uv pip install vllm --torch-backend=auto
+uv pip install ipykernel matplotlib
 ```
