@@ -2,7 +2,7 @@
 
 Inspired by https://outsidetext.substack.com/p/how-does-a-blind-model-see-the-earth, exploring creating images by probing output probabilities of an LLM, asking a question about one coordinate at a time.
 
-Currently getting about resulting probabilities at a rate of 15 points per second using Qwen3-8B and one Nvidia RTX 3090 and vLLM (chosen to hopefully maximally utilize the possible caching when using many very similar prompts in a row).
+Currently getting resulting probabilities at a rate of about 15 points per second using Qwen3-8B and one Nvidia RTX 3090 and vLLM (chosen to hopefully maximally utilize the possible caching when using many very similar prompts in a row).
 
 Tried testing this by generating a circle and a Mandelbrot set, but neither look very impressive with Qwen3-8b:
 
